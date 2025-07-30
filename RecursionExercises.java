@@ -6,6 +6,7 @@ public class RecursionExercises {
         System.out.println(HarmonicAverage(2));
     }
 
+    //1
     public static int MultiplicationTwoNaturalNumberBySuccessiveAdditionRecursive(int n, int m) throws Exception {
         if (n < 0 || m < 0) {
             throw new Exception("Numbers must be natural numbers");
@@ -16,6 +17,7 @@ public class RecursionExercises {
         return m + MultiplicationTwoNaturalNumberBySuccessiveAdditionRecursive(n - 1, m);
     }
 
+    //2
     public static int SumTwoNaturalNumberBySuccessiveAdditionRecursive(int n, int m) throws Exception {
         if (n < 0 || m < 0) {
             throw new Exception("Numbers must be natural numbers");
@@ -30,6 +32,7 @@ public class RecursionExercises {
         return 1 + SumTwoNaturalNumberBySuccessiveAdditionRecursive(n, m - 1);
     }
 
+    //2.1 Tail Recursion
     public static int sumTailHelper(int n, int m, int acc) {
         if (m == 0) {
             return n + acc;
@@ -37,6 +40,7 @@ public class RecursionExercises {
         return sumTailHelper(n, m - 1, acc + 1); // <- última instrução
     }
 
+    //3
     public static double HarmonicAverage(double n) throws Exception {
 
         if (n == 0)
