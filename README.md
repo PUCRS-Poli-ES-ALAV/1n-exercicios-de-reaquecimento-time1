@@ -9,7 +9,7 @@ nosso ambiente de trabalho (Git-Github-Github classroom).
    [DONE]. Soma de dois números naturais, através de incrementos sucessivos (Ex.: 3 + 2 = + + (+ + + 1)).
    [DONE] Cálculo de 1 + 1/2 + 1/3 + 1/4 + ... + 1/N.
    [DONE] Inversão de uma string.
-   1. Gerador da sequência dada por:
+   [DONE]Gerador da sequência dada por:
          * F(1) = 1
          * F(2) = 2
          * F(n) = 2 ∗ F(n − 1) + 3 ∗ F(n − 2).
