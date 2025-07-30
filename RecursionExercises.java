@@ -4,9 +4,10 @@ public class RecursionExercises {
         System.out.println(SumTwoNaturalNumberBySuccessiveAdditionRecursive(2, 3));
         System.out.println(sumTailHelper(2, 3, 0));
         System.out.println(HarmonicAverage(2));
+        System.out.println(StringInversion("gato"));
     }
 
-    //1
+    // 1
     public static int MultiplicationTwoNaturalNumberBySuccessiveAdditionRecursive(int n, int m) throws Exception {
         if (n < 0 || m < 0) {
             throw new Exception("Numbers must be natural numbers");
@@ -17,7 +18,7 @@ public class RecursionExercises {
         return m + MultiplicationTwoNaturalNumberBySuccessiveAdditionRecursive(n - 1, m);
     }
 
-    //2
+    // 2
     public static int SumTwoNaturalNumberBySuccessiveAdditionRecursive(int n, int m) throws Exception {
         if (n < 0 || m < 0) {
             throw new Exception("Numbers must be natural numbers");
@@ -32,7 +33,7 @@ public class RecursionExercises {
         return 1 + SumTwoNaturalNumberBySuccessiveAdditionRecursive(n, m - 1);
     }
 
-    //2.1 Tail Recursion
+    // 2.1 Tail Recursion
     public static int sumTailHelper(int n, int m, int acc) {
         if (m == 0) {
             return n + acc;
@@ -40,7 +41,7 @@ public class RecursionExercises {
         return sumTailHelper(n, m - 1, acc + 1); // <- última instrução
     }
 
-    //3
+    // 3
     public static double HarmonicAverage(double n) throws Exception {
 
         if (n == 0)
@@ -48,7 +49,20 @@ public class RecursionExercises {
         if (n == 1)
             return 1;
 
-        return 1 / n + HarmonicAverage(n-1);
+        return 1 / n + HarmonicAverage(n - 1);
     }
 
+    public static String StringInversion(String s) throws Exception {
+        if (s == null) {
+            throw new Exception("The String must be not null");
+        }
+        if (s.length() == 1) {
+            return s;
+        }
+
+        char last = s.charAt(s.length()-1);
+        String rest = s.substring(0, s.length() - 1);
+
+        return last + StringInversion(rest);
+    }
 }
