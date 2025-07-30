@@ -44,7 +44,7 @@ public class RecursionExercises {
         if (n == 1)
             return 1;
 
-        return 1 + HarmonicAverage(1 / (n-1));
+        return 1 / n + HarmonicAverage(n-1);
     }
 
 }
