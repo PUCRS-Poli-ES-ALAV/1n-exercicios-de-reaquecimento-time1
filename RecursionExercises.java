@@ -5,6 +5,7 @@ public class RecursionExercises {
         System.out.println(sumTailHelper(2, 3, 0));
         System.out.println(HarmonicAverage(2));
         System.out.println(StringInversion("gato"));
+        System.out.println(f(3));
     }
 
     // 1
@@ -45,13 +46,14 @@ public class RecursionExercises {
     public static double HarmonicAverage(double n) throws Exception {
 
         if (n == 0)
-            throw new Exception("Numer must be natural numbers");
+            throw new Exception("Number must be natural numbers");
         if (n == 1)
             return 1;
 
         return 1 / n + HarmonicAverage(n - 1);
     }
 
+    //4
     public static String StringInversion(String s) throws Exception {
         if (s == null) {
             throw new Exception("The String must be not null");
@@ -65,4 +67,22 @@ public class RecursionExercises {
 
         return last + StringInversion(rest);
     }
+
+    /*
+        * Gerador da sequência dada por:
+        * F(1) = 1
+        * F(2) = 2
+        * F(n) = 2 ∗ F(n − 1) + 3 ∗ F(n − 2).
+     */
+
+    public static double f(double n){
+        if (n == 1) {
+            return 1;
+        }
+        if (n == 2) {
+            return 2;
+        }
+
+        return 2 * f(n-1) + 3 * f(n - 2);
+    } 
 }
